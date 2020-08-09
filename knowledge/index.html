@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Knowledge Base HTML Template</title>
+    <title>KMSystem</title>
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <script src="assets/js/jquery.js"></script>
@@ -49,18 +49,26 @@
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav uk-text-uppercase uk-visible@m uk-margin-medium-left">
                             <li><a href="index.html">Inicio</a></li>
+                                                   
+                            <li><a href="creaCategoría.html">Crear Categoría</a></li>
+                            <li><a href="validaRegistros.html">Revisión de registros</a></li>
                             <li>
+                                <a href="#">Seguridad</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li><a href="article.html">Scrollspy</a></li>
-                                        <li><a href="article-narrow.html">Narrow</a></li>
+                                        <li><a href="roles.html">Mantenimiento roles</a></li>
+                                        <li><a href="usuariosSistema.html">Asignación roles</a></li>
                                     </ul>
                                 </div>
-                            </li>                        
-                            <li><a href="faq.html">Categorías</a></li>
-                            <li><a href="contact.html">Revisión de registros</a></li>
-                            <li><a href="components.html">Seguridad</a></li>
-                            <li><a href="components.html">Mi cuenta</a></li>
+                            </li>
+                            <li>
+                                <a href="#">Mi cuenta</a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="registrosEnviados.html">Registros enviados</a></li>
+                                    </ul>
+                                </div>
+                            </li>   
                         </ul>
                         <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
                     </div>
@@ -72,7 +80,7 @@
             <!--<p class="uk-text-lead uk-text-center uk-light">Lead volutpat nibh ligula gravida. Magna auctor eget venenatis phasellus luctus sodales pulvinar</p>-->
             <div class="uk-flex uk-flex-center uk-inliner">
                 <form class="uk-margin-medium-top uk-margin-xlarge-bottom uk-search uk-search-default">
-                    <a href="" class="uk-search-icon-flip" uk-search-icon></a>
+                    <a href="registrosBusqueda.html" class="uk-search-icon-flip" uk-search-icon></a>
                     <input id="autocomplete" class="uk-search-input uk-form-large" type="search" autocomplete="off" name="s" placeholder="Buscar registros">
                 </form>
             </div>
@@ -85,137 +93,139 @@
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Administration" >Opciones</a>
+                          <a href="#" title="Administration" >Opciones</a>
                         </h2>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-pencil"></i>Crear nuevo registro<i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="creaRegistro.html" title=""  style="color: white;"><i class="icon-pencil"></i>Crear nuevo registro<i class="icon-chevron-right"></i></a></span>
+                        <br>
+                        <br>
+                        <span class="uk-label"><a href="creaCategoría.html" title=""  style="color: white;"><i class="icon-pencil"></i>Crear nueva Categoría<i class="icon-chevron-right"></i></a></span>
                       </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Administration" >Administration</a>
+                          <a href="registros.html" title="Administration" >Administración</a>
                         </h2>
                         <ul class="category-posts">    
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Disabled Comments</a></li>
-                          <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Fully Responsive Design</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Shipping Options Page</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Setting up attributes</a></li>
-                          <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Downloadable products</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Increasing Memory</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0001 - Imgs no se descargan Adm</a></li>
+                          <li style="list-style:none"><i class="icon-picture"></i> <a href="registroVisualizar.html">KB0002 - Restaurar imagenes Adm</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0003 - Configuración visualizar PDF</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0004 - Configurar perfil usuario</a></li>
+                          <li style="list-style:none"><i class="icon-picture"></i> <a href="registroVisualizar.html">KB0005 - Comentarios desactivados</a></li>
                         </ul>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 7 articles <i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                       </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Customization" >Customization</a>
+                          <a href="registros.html" title="Customization" >Soporte técnico</a>
                         </h2>
                         <ul class="category-posts">    
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Standard Post Format</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Theme Set Up</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Well Documented</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Shipping Options Page</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Increasing Memory</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Shipping Methods</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0016 - Falla de lectura almacenamiento</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0017 - Temperaturas altas servidores</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0018 - Caída de enlace telecomunicaciones</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0019 - Daño en router</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0020 - Actualización de firewall</a></li>
+                          <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0021 - Actualización de antivirus</a></li>
                         </ul>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 7 articles <i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                       </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Extensions" >Extensions</a>
+                          <a href="registros.html" title="Extensions" >Mesa de ayuda</a>
                         </h2>
                         <ul class="category-posts">    
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Disabled Comments</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Follow up Emails</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Payment Extension</a></li>
-                          <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Live Search</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Shipping Methods</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Import and Export Extension</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0026 - Falla de lectura almacenamiento</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0027 - Temperaturas altas servidores</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0028 - Caída de enlace telecomunicaciones</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0029 - Daño en router</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0030 - Actualización de firewall</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0031 - Actualización de antivirus</a></li>
                         </ul>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 7 articles <i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                         </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Getting Started" >Getting Started</a>
+                          <a href="registros.html" title="Getting Started" >Gestión de aplicaciones</a>
                         </h2>
                         <ul class="category-posts">    
-                        <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Standard Post Format</a></li>
-                        <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Theme Set Up</a></li>
-                        <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Fully Responsive Design</a></li>
-                        <li style="list-style:none"><i class="icon-film"></i> <a href="article.html">Theme Installation</a></li>
-                        <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Local Server Setup</a></li>
-                        <li style="list-style:none"><i class="icon-film"></i> <a href="article.html">Plugin Installation</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0046 - Falla de lectura almacenamiento</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0047 - Temperaturas altas servidores</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0048 - Caída de enlace telecomunicaciones</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0049 - Daño en router</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0050 - Actualización de firewall</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0051 - Actualización de antivirus</a></li>
                       </ul>
-                      <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 8 articles <i class="icon-chevron-right"></i></a></span>
+                      <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                     </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Shipping Methods" >Shipping Methods</a>
+                          <a href="registros.html" title="Shipping Methods" >Infraestructura</a>
                         </h2>
                         <ul class="category-posts">    
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Disabled Comments</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Follow up Emails</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Unlimited Colors</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Well Documented</a></li>
-                          <li style="list-style:none"><i class="icon-film"></i> <a href="article.html">Multiple Ship to Addresses</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Shipping Options Page</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0066 - Falla de lectura almacenamiento</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0067 - Temperaturas altas servidores</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0068 - Caída de enlace telecomunicaciones</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0069 - Daño en router</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0070 - Actualización de firewall</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0071 - Actualización de antivirus</a></li>
                         </ul>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 7 articles <i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros <i class="icon-chevron-right"></i></a></span>
                       </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Tips and Tricks" >Tips and Tricks</a>
+                          <a href="registros.html" title="Tips and Tricks" >Telecomunicaciones</a>
                         </h2>
                         <ul class="category-posts">    
-                        <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Disabled Comments</a></li>
-                        <listyle="list-style:none"><i class="icon-file"></i> <a href="article.html">Theme Set Up</a></li>
-                        <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Fully Responsive Design</a></li>
-                        <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Setting up attributes</a></li>
-                        <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Downloadable product</a></li>
-                        <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Increasing Memory</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0086 - Falla de lectura almacenamiento</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0087 - Temperaturas altas servidores</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0088 - Caída de enlace telecomunicaciones</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0089 - Daño en router</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0090 - Actualización de firewall</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0091 - Actualización de antivirus</a></li>
                       </ul>
-                      <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 8 articles <i class="icon-chevron-right"></i></a></span>
+                      <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                     </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Troubleshooting" >Troubleshooting</a>
+                          <a href="registros.html" title="Troubleshooting" >Monitoreo de sistemas</a>
                         </h2>
                         <ul class="category-posts">    
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Standard Post Format</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Theme Set Up</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Increasing Memory</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Multiple installs on one domain</a></li>
-                          <li style="list-style:none"><i class="icon-film"></i> <a href="article.html">Warnings and errors</a></li>
-                          <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Responsive Design</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0096 - Falla de lectura almacenamiento</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0097 - Temperaturas altas servidores</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0098 - Caída de enlace telecomunicaciones</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0099 - Daño en router</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0100 - Actualización de firewall</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0101 - Actualización de antivirus</a></li>
                         </ul>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 6 articles <i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                     </div>
                 </div>
                 <div>
                     <div class="span3">
                         <h2>
-                          <a href="articles.html" title="Admin Panel" >Admin Panel</a>
+                          <a href="registros.html" title="Admin Panel" >Servidores y almacenamiento</a>
                         </h2>
                         <ul class="category-posts">    
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Standard Post Format</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Follow up Emails</a></li>
-                          <li style="list-style:none"><i class="icon-file"></i> <a href="article.html">Local Server Setup</a></li>
-                          <li style="list-style:none"><i class="icon-film"></i> <a href="article.html">Plugin Installation</a></li>
-                          <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Upgrading Theme</a></li>
-                          <li style="list-style:none"><i class="icon-picture"></i> <a href="article.html">Live Search</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0116 - Falla de lectura almacenamiento</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0117 - Temperaturas altas servidores</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0118 - Caída de enlace telecomunicaciones</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0119 - Daño en router</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0120 - Actualización de firewall</a></li>
+                            <li style="list-style:none"><i class="icon-file"></i> <a href="registroVisualizar.html">KB0121 - Actualización de antivirus</a></li>
                         </ul>
-                        <span class="uk-label"><a href="articles.html" title=""  style="color: white;"><i class="icon-folder-open"></i>View all 7 articles <i class="icon-chevron-right"></i></a></span>
+                        <span class="uk-label"><a href="registros.html" title=""  style="color: white;"><i class="icon-folder-open"></i>Ver todos los registros<i class="icon-chevron-right"></i></a></span>
                     </div>
                 </div>
 
@@ -235,21 +245,21 @@
                 <div>
                     <h3>Popular Articles</h3>
                     <ul class="uk-list uk-list-large uk-list-divider link-icon-right">
-                        <li><a href="article.html">Voluptatem accusantium doloremque laudan rem aperiam</a></li>
-                        <li><a href="article.html">Sorem do eiusmod tempor incididunt dolore magna aliqua</a></li>
-                        <li><a href="article.html">Lorem ipsum dolor sit amet elit sed do eiusmod</a></li>
-                        <li><a href="article.html">Sed ut perspiciatis unde omnis iste natus error sit aperiam</a></li>
-                        <li><a href="article.html">Lorem ipsum dolor sit amet, consectetur adipiscing sed iusmod</a></li>
+                        <li><a href="registroVisualizar.html">Voluptatem accusantium doloremque laudan rem aperiam</a></li>
+                        <li><a href="registroVisualizar.html">Sorem do eiusmod tempor incididunt dolore magna aliqua</a></li>
+                        <li><a href="registroVisualizar.html">Lorem ipsum dolor sit amet elit sed do eiusmod</a></li>
+                        <li><a href="registroVisualizar.html">Sed ut perspiciatis unde omnis iste natus error sit aperiam</a></li>
+                        <li><a href="registroVisualizar.html">Lorem ipsum dolor sit amet, consectetur adipiscing sed iusmod</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3>Recent Articles</h3>
                     <ul class="uk-list uk-list-large uk-list-divider link-icon-right">
-                        <li><a href="article.html">Lorem ipsum dolor sit ut labore et dolore magna aliqua</a></li>
-                        <li><a href="article.html">Sed ut perspiciatis unde omnis iste natus err aperiam</a></li>
-                        <li><a href="article.html">Consectetur adipiscing elit sed do eiusmod</a></li>
-                        <li><a href="article.html">Donseced do eiusmod tempor incididunt ut labore magna aliqua</a></li>
-                        <li><a href="article.html">Sed utem accusantium doloremque laudantium totam</a></li>
+                        <li><a href="registroVisualizar.html">Lorem ipsum dolor sit ut labore et dolore magna aliqua</a></li>
+                        <li><a href="registroVisualizar.html">Sed ut perspiciatis unde omnis iste natus err aperiam</a></li>
+                        <li><a href="registroVisualizar.html">Consectetur adipiscing elit sed do eiusmod</a></li>
+                        <li><a href="registroVisualizar.html">Donseced do eiusmod tempor incididunt ut labore magna aliqua</a></li>
+                        <li><a href="registroVisualizar.html">Sed utem accusantium doloremque laudantium totam</a></li>
                     </ul>
                 </div>
             </div>
@@ -280,16 +290,21 @@
             <a class="uk-margin-small-bottom uk-logo uk-text-uppercase" href="index.html"><span class="uk-margin-small-right" uk-icon="icon: lifesaver"></span> KMSystem</a>
             <ul class="uk-nav uk-nav-default uk-text-uppercase">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="creaCategoría.html">Crear Categoría</a></li>
+                <li><a href="validaRegistros.html">Revisión de registros</a></li>
                 <li class="uk-parent">
-                    <a href="article.html">Registros</a>
+                    <a href="#">Seguridad</a>
                     <ul class="uk-nav-sub">
-                        <li><a href="article.html">Scrollspy</a></li>
-                        <li><a href="article-narrow.html">Narrow</a></li>
+                        <li><a href="roles.html">Mantenimiento roles</a></li>
+                        <li><a href="usuariosSistema.html">Asignación roles</a></li>
                     </ul>
                 </li>
-                <li><a href="faq.html">Faq</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="components.html">Components</a></li>
+                <li class="uk-parent">
+                    <a href="#">Mi cuenta</a>
+                    <ul class="uk-nav-sub">
+                        <li><a href="registrosEnviados.html">Registros enviados</a></li>
+                    </ul>
+                </li>
             </ul>          
         </div>
     </div>

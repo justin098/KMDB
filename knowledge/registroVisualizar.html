@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registros</title>
+    <title>Article Narrow - Knowledge Base HTML Template</title>
     <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -54,17 +54,11 @@
             <div uk-grid>
                 <div class="uk-width-2-3@m">
                     <ul class="uk-breadcrumb uk-visible@m">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><span href="">Registros</span></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="registros.html">Administración</a></li>
+                        <li><span href="">KB0001 - Imgs no se descargan Adm
+                        </span></li>
                     </ul>
-                </div>
-                <div class="uk-width-1-3@m">
-                    <div class="uk-margin">
-                        <form class="uk-search uk-search-default">
-                            <a href="" class="uk-search-icon-flip" uk-search-icon></a>
-                            <input id="autocomplete" class="uk-search-input" type="search" autocomplete="off" placeholder="Buscar">
-                        </form>
-                    </div>
                 </div>
             </div>
             <div class="border-top"></div>
@@ -72,38 +66,32 @@
     </div>
 
     <div class="uk-section uk-section-small uk-padding-remove-bottom section-content">
-        <div class="uk-container">
-            <div class="uk-grid-medium" uk-grid>
-                <div class="uk-width-3-4@m">
-                    <h2>Opciones</h2>
-                    <button class="uk-button uk-button-primary">Crear registro</button>
-                    <h1>Administración</h1>
+        <div class="uk-container container-xs">
+            <article class="uk-article">
+                <header>
+                    <h1 class="uk-article-title uk-margin-bottom">KB0001 - Imgs no se descargan Adm</h1>
+                </header>
+                <div class="entry-content uk-margin-medium-top">
+                    <img src="assets/img/imgKB.png">
+
+                    <p class="uk-text-lead">He ingresado al sistema Adm y no se ha descargado la imagen que debe enviarsele a los clientes.
+                        Solo pasa con el sistema Adm, si abro cualquier otro sistema si funciona.</p>
+                    <h2 id="animation-repeat">Pasos</h2>
                     
-                    <ul class="list-faq">
-                        <li>
-                            <h3><a href="registroVisualizar.html">KB0001 - Imgs no se descargan Adm</a></h3>
-                        </li>
-                        <li>
-                            <h3><a href="#">KB0002 - Restaurar imagenes Adm</a></h3>
-                        </li>
-                        <li>
-                            <h3><a href="#">KB0003 - Configuración visualizar PDF</a></h3>
-                        </li>
-                        <li>
-                            <h3><a href="#">KB0004 - Configurar perfil usuario</a></h3>
-                        </li>
-                        <li>
-                            <h3><a href="#">KB0005 - Comentarios desactivados</a></h3>
-                        </li>
-                        <li>
-                            <h3><a href="#">KB0006 - Validar acceso Adm</a></h3>
-                        </li>
-                        <li>
-                            <h3><a href="#">KB0007 - Documentación sistema Adm</a></h3>
-                        </li>
-                    </ul>
+                    <p>Para mostrar las imágenes de este sistema debe seguir los siguientes pasos:</p>
+                    <ol class="ol-pretty uk-list-large">
+                        <li>Ajustes</li>
+                        <li>Configuración avanzada</li>
+                        <li>Seleccionar habilitar imágenes predeterminadas</li>
+                        <li>Dar clic en aplicar cambios</li>
+                    </ol>
                 </div>
-            </div>
+                <div class="article-votes uk-text-center uk-margin-medium-top uk-padding uk-padding-remove-horizontal border-bottom border-top">
+                    <h3>Si este articulo requiere algún cambio por favor da clic en alguno de los siguientes botones:</h3>
+                    <a href="#" class="vote uk-button uk-button-outline-primary"><span class="uk-margin-small-right" uk-icon="icon: check; ratio: 0.8"></span>Modificar</a>
+                    <a href="#" class="vote uk-button uk-button-outline-primary uk-margin-small-left"><span class="uk-margin-small-right uk-inline" uk-icon="icon: close; ratio: 0.8"></span>Desactivar</a>
+                </div>
+            </article>
         </div>
     </div>
 
