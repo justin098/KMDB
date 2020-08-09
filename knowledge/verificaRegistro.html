@@ -10,40 +10,49 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/ValidacionesVerificaRegistro.js"></script>
+    <script>
+        $( document ).ready(function() {
+           validarMenu()
+        });
+    </script>
 </head>
 
 <body>
 
     <nav class="uk-navbar-container uk-margin uk-navbar-transparent uk-background-primary uk-light uk-margin-remove-bottom">
         <div class="uk-container">
-            <div uk-navbar>
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-item uk-logo uk-text-uppercase" href="index.html"><span class="uk-margin-small-right" uk-icon="icon: lifesaver"></span> KMSystem</a>
-                </div>
-                <div class="uk-navbar-right">
-                    <ul class="uk-navbar-nav uk-text-uppercase uk-visible@m uk-margin-medium-left">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="creaCategoría.html">Crear Categoría</a></li>
-                        <li><a href="validaRegistros.html">Revisión de registros</a></li>
-                        <li>
-                            <a href="#">Seguridad</a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="roles.html">Mantenimiento roles</a></li>
-                                    <li><a href="usuariosSistema.html">Asignación roles</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">Mi cuenta</a>
-                            <div class="uk-navbar-dropdown">
-                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                    <li><a href="registrosEnviados.html">Registros enviados</a></li>
-                                </ul>
-                            </div>
-                        </li>  
-                    </ul>
-                    <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
+                <div uk-navbar>
+                    <div class="uk-navbar-left">
+                        <a class="uk-navbar-item uk-logo uk-text-uppercase" href="index.html"><span class="uk-margin-small-right" uk-icon="icon: lifesaver"></span> KMSystem</a>
+                    </div>
+                    <div class="uk-navbar-right">
+                        <ul class="uk-navbar-nav uk-text-uppercase uk-visible@m uk-margin-medium-left">
+                            <li><a href="index.html">Inicio</a></li>
+                                                   
+                            <li id="mnuCrear" ><a href="creaCategoría.html">Crear Categoría</a></li>
+                            <li id="mnuRevision" ><a href="validaRegistros.html">Revisión de registros</a></li>
+                            <li id="mnuSeguridad" >
+                                <a href="#">Seguridad</a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="roles.html">Mantenimiento roles</a></li>
+                                        <li><a href="usuariosSistema.html">Asignación roles</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li id="mnuMiCuenta">
+                                <a href="#">Mi cuenta</a>
+                                <div class="uk-navbar-dropdown">
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li><a href="registrosEnviados.html">Registros enviados</a></li>
+                                    </ul>
+                                </div>
+                            </li>   
+                            
+                        </ul>
+                        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
+                    </div>                     
                 </div>
             </div>
         </div>
@@ -102,12 +111,12 @@ Comprueba la conexión inalámbrica (para impresoras inalámbricas). Realizar un
                         <div class="border-top"></div>
                         <label class="uk-form-label" for="form-stacked-text">Comentario:</label>
                         <div class="uk-form-controls">
-                            <textarea class="uk-textarea" rows="3"></textarea>
+                            <textarea class="uk-textarea" id="txtComentario" rows="3"></textarea>
                         </div>
                         <div class="uk-margin">
                             <div class="uk-form-controls">
-                                <button class="uk-button uk-button-primary uk-width-1-1 uk-width-auto@s">Aprobar registro</button>
-                                <button class="uk-button uk-button-danger uk-width-1-1 uk-width-auto@s">Rechazar registro</button>
+                                <button class="uk-button uk-button-primary uk-width-1-1 uk-width-auto@s" onclick="apruebaRegistro()">Aprobar registro</button>
+                                <button class="uk-button uk-button-danger uk-width-1-1 uk-width-auto@s" onclick="return rechazaRegistro();">Rechazar registro</button>
                             </div>
                         </div>
                     </form>
@@ -128,6 +137,7 @@ Comprueba la conexión inalámbrica (para impresoras inalámbricas). Realizar un
                     <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="icon: youtube"></a>
                 </div>
                 <div class="uk-flex-first@m uk-text-left@m">
+                     <p id="idRol" class="uk-text-small"></p>        
                     <p class="uk-text-small">Copyright 2020 Powered by GrupoUno-Ingeniería del software</p>
                 </div>
             </div>

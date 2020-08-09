@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src ="assets/js/ValidacionesLogin.js"></script>
 </head>
 
 <body>
@@ -20,12 +21,7 @@
                 <div class="uk-navbar-left">
                     <a class="uk-navbar-item uk-logo uk-text-uppercase" href="login.html"><span class="uk-margin-small-right" uk-icon="icon: lifesaver"></span> KMSystem</a>
                 </div>
-                <div class="uk-navbar-right">
-                    <ul class="uk-navbar-nav uk-text-uppercase uk-visible@m uk-margin-medium-left">
-                        <li><a href="login.html">Iniciar sesión</a></li>
-                    </ul>
-                    <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
-                </div>
+
             </div>
         </div>
     </nav>
@@ -41,20 +37,21 @@
                 <div class="uk-margin-medium-top border-top padding-top">
                     <form class="uk-form-stacked">
                         <div class="uk-margin">
-                            <label class="uk-form-label" for="form-stacked-text">Usuario</label>
+                            <label  class="uk-form-label" for="form-stacked-text">Usuario</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input" id="form-stacked-text" type="text">
+                                <input id="usuario" class="uk-input" id="form-stacked-text" type="text" onkeypress="return soloNumeros(event)"
+                                maxlength="18" >
                             </div>
                         </div>
                         <div class="uk-margin">
-                            <label class="uk-form-label" for="form-stacked-text">Contraseña</label>
+                            <label   class="uk-form-label" for="form-stacked-text">Contraseña</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input" id="form-stacked-text" type="password">
+                                <input id="clave" class="uk-input" id="form-stacked-text" type="password" maxlength="30">
                             </div>
                         </div>
                         <div class="uk-margin">
                             <div class="uk-form-controls">
-                                <button class="uk-button uk-button-primary uk-width-1-1 uk-width-auto@s">Ingresar</button>
+                               <a id="IndexLink" class="uk-button uk-button-primary uk-width-1-1 uk-width-auto@s" href="#" onclick="validarUsuario()" >Ingresar</a>
                             </div>
                         </div>
                     </form>

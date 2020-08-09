@@ -16,6 +16,7 @@
     
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/ValidacionesIndex.js"></script>
 
 
 
@@ -36,6 +37,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <script>
+        $( document ).ready(function() {
+           validarMenu()
+        });
+    </script>
 </head>
 
 <body>
@@ -48,11 +55,11 @@
                     </div>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav uk-text-uppercase uk-visible@m uk-margin-medium-left">
-                            <li><a href="index.html">Inicio</a></li>
+                            <!--<li><a href="index.html">Inicio</a></li>-->
                                                    
-                            <li><a href="creaCategoría.html">Crear Categoría</a></li>
-                            <li><a href="validaRegistros.html">Revisión de registros</a></li>
-                            <li>
+                            <li id="mnuCrear" ><a href="creaCategoría.html">Crear Categoría</a></li>
+                            <li id="mnuRevision" ><a href="validaRegistros.html">Revisión de registros</a></li>
+                            <li id="mnuSeguridad" >
                                 <a href="#">Seguridad</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -61,7 +68,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li>
+                            <li id="mnuMiCuenta">
                                 <a href="#">Mi cuenta</a>
                                 <div class="uk-navbar-dropdown">
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
@@ -69,28 +76,30 @@
                                     </ul>
                                 </div>
                             </li>   
+                            
                         </ul>
                         <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" uk-navbar-toggle-icon uk-toggle></a>
-                    </div>
+                    </div>                     
                 </div>
+                <p id="NombreUsuario" class="uk-text-small">Bienvenid@</p>
             </div>
         </nav>
         <div class="uk-container hero">
             <h1 class="uk-heading-primary uk-text-center uk-margin-large-top uk-light">Base de conocimientos de la Fidélitas</h1>
             <!--<p class="uk-text-lead uk-text-center uk-light">Lead volutpat nibh ligula gravida. Magna auctor eget venenatis phasellus luctus sodales pulvinar</p>-->
             <div class="uk-flex uk-flex-center uk-inliner">
-                <form class="uk-margin-medium-top uk-margin-xlarge-bottom uk-search uk-search-default">
-                    <a href="registrosBusqueda.html" class="uk-search-icon-flip" uk-search-icon></a>
-                    <input id="autocomplete" class="uk-search-input uk-form-large" type="search" autocomplete="off" name="s" placeholder="Buscar registros">
+                <form   class="uk-margin-medium-top uk-margin-xlarge-bottom uk-search uk-search-default">
+                    <a id="IconoBusquedaPrincipal" href="#" onclick="return validaBusqueda();" class="uk-search-icon-flip" uk-search-icon></a>
+                    <input id="BarraBusquedaPrincipal"  class="uk-search-input uk-form-large" type="search" autocomplete="off" name="s" placeholder="Buscar registros">
                 </form>
             </div>
         </div>
     </div>
 
-    <div class="uk-section">
+    <div id="ContenedorPrincipal" class="uk-section">
         <div class="uk-container">
             <div class="uk-child-width-1-3@s uk-grid-match uk-grid-medium uk-text-center" uk-grid>
-                <div>
+                <div id="OpcionesContainer"> 
                     <div class="span3">
                         <h2>
                           <a href="#" title="Administration" >Opciones</a>
@@ -98,7 +107,7 @@
                         <span class="uk-label"><a href="creaRegistro.html" title=""  style="color: white;"><i class="icon-pencil"></i>Crear nuevo registro<i class="icon-chevron-right"></i></a></span>
                         <br>
                         <br>
-                        <span class="uk-label"><a href="creaCategoría.html" title=""  style="color: white;"><i class="icon-pencil"></i>Crear nueva Categoría<i class="icon-chevron-right"></i></a></span>
+                        <span id="spnCrearCategoria" class="uk-label"><a href="creaCategoría.html" title=""  style="color: white;"><i class="icon-pencil"></i>Crear nueva Categoría<i class="icon-chevron-right"></i></a></span>
                       </div>
                 </div>
                 <div>
@@ -278,7 +287,8 @@
                     <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="icon: twitter"></a>
                     <a href="#" class="uk-icon-link uk-margin-small-right" uk-icon="icon: youtube"></a>
                 </div>
-                <div class="uk-flex-first@m uk-text-left@m">
+                <div class="uk-flex-first@m uk-text-left@m">   
+                    <p id="idRol" class="uk-text-small"></p>                 
                     <p class="uk-text-small">Copyright 2020 Powered by GrupoUno-Ingeniería del software</p>
                 </div>
             </div>
